@@ -11,6 +11,11 @@ class Xylophone extends StatefulWidget {
 }
 
 class _XylophoneState extends State<Xylophone> {
+  void playSound(int fileNumber) {
+    final player = AudioPlayer();
+    player.play(AssetSource('note$fileNumber.wav'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,50 +24,44 @@ class _XylophoneState extends State<Xylophone> {
           child: Column(
             children: [
               TextButton(
-                style: ElevatedButton.styleFrom(primary: Colors.red),
+                style: ElevatedButton.styleFrom(primary: Colors.redAccent),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playSound(1);
                 },
                 child: Text(''),
               ),
               TextButton(
-                style: ElevatedButton.styleFrom(primary: Colors.red),
+                style: ElevatedButton.styleFrom(primary: Colors.greenAccent),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playSound(2);
                 },
                 child: Text(''),
               ),
               TextButton(
-                style: ElevatedButton.styleFrom(primary: Colors.red),
+                style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playSound(3);
                 },
                 child: Text(''),
               ),
               TextButton(
-                style: ElevatedButton.styleFrom(primary: Colors.red),
+                style: ElevatedButton.styleFrom(primary: Colors.orangeAccent),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playSound(4);
                 },
                 child: Text(''),
               ),
               TextButton(
-                style: ElevatedButton.styleFrom(primary: Colors.red),
+                style: ElevatedButton.styleFrom(primary: Colors.black26),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playSound(5);
                 },
                 child: Text(''),
               ),
-              TextButton(
-                style: ElevatedButton.styleFrom(primary: Colors.red),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Colors.purpleAccent),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playSound(6);
                 },
                 child: Text(''),
               ),
