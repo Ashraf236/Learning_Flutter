@@ -16,14 +16,57 @@ class _XylophoneState extends State<Xylophone> {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Center(
-            child: TextButton(
-              onPressed: () {
-                final player = AudioPlayer();
-                player.play(AssetSource('note2.wav'));
-              },
-              child: Text('click me'),
-            ),
+          child: Column(
+            children: [
+              TextButton(
+                style: ElevatedButton.styleFrom(primary: Colors.red),
+                onPressed: () {
+                  final player = AudioPlayer();
+                  player.play(AssetSource('note2.wav'));
+                },
+                child: Text(''),
+              ),
+              TextButton(
+                style: ElevatedButton.styleFrom(primary: Colors.red),
+                onPressed: () {
+                  final player = AudioPlayer();
+                  player.play(AssetSource('note2.wav'));
+                },
+                child: Text(''),
+              ),
+              TextButton(
+                style: ElevatedButton.styleFrom(primary: Colors.red),
+                onPressed: () {
+                  final player = AudioPlayer();
+                  player.play(AssetSource('note2.wav'));
+                },
+                child: Text(''),
+              ),
+              TextButton(
+                style: ElevatedButton.styleFrom(primary: Colors.red),
+                onPressed: () {
+                  final player = AudioPlayer();
+                  player.play(AssetSource('note2.wav'));
+                },
+                child: Text(''),
+              ),
+              TextButton(
+                style: ElevatedButton.styleFrom(primary: Colors.red),
+                onPressed: () {
+                  final player = AudioPlayer();
+                  player.play(AssetSource('note2.wav'));
+                },
+                child: Text(''),
+              ),
+              TextButton(
+                style: ElevatedButton.styleFrom(primary: Colors.red),
+                onPressed: () {
+                  final player = AudioPlayer();
+                  player.play(AssetSource('note2.wav'));
+                },
+                child: Text(''),
+              ),
+            ],
           ),
         ),
       ),
