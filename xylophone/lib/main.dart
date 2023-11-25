@@ -16,6 +16,18 @@ class _XylophoneState extends State<Xylophone> {
     player.play(AssetSource('note$fileNumber.wav'));
   }
 
+  Expanded xyloKey({required int noteKey, required Color color}) {
+    return Expanded(
+      child: TextButton(
+        style: ElevatedButton.styleFrom(primary: color),
+        onPressed: () {
+          playSound(noteKey);
+        },
+        child: Text(''),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,60 +37,12 @@ class _XylophoneState extends State<Xylophone> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
-                child: TextButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.redAccent),
-                  onPressed: () {
-                    playSound(1);
-                  },
-                  child: Text(''),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.greenAccent),
-                  onPressed: () {
-                    playSound(2);
-                  },
-                  child: Text(''),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
-                  onPressed: () {
-                    playSound(3);
-                  },
-                  child: Text(''),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.orangeAccent),
-                  onPressed: () {
-                    playSound(4);
-                  },
-                  child: Text(''),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.pink),
-                  onPressed: () {
-                    playSound(5);
-                  },
-                  child: Text(''),
-                ),
-              ),
-              Expanded(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.purpleAccent),
-                  onPressed: () {
-                    playSound(6);
-                  },
-                  child: Text(''),
-                ),
-              ),
+              xyloKey(noteKey: 1, color: Colors.redAccent),
+              xyloKey(noteKey: 2, color: Colors.greenAccent),
+              xyloKey(noteKey: 3, color: Colors.blueAccent),
+              xyloKey(noteKey: 4, color: Colors.orangeAccent),
+              xyloKey(noteKey: 5, color: Colors.purpleAccent),
+              xyloKey(noteKey: 6, color: Colors.pinkAccent),
             ],
           ),
         ),
