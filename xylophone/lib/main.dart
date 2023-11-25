@@ -19,7 +19,7 @@ class _XylophoneState extends State<Xylophone> {
   Expanded xyloKey({required int noteKey, required Color color}) {
     return Expanded(
       child: TextButton(
-        style: ElevatedButton.styleFrom(primary: color),
+        style: ElevatedButton.styleFrom(backgroundColor: color),
         onPressed: () {
           playSound(noteKey);
         },
